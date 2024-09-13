@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Learning App</title>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Geometry Learning App</h1>
+    
+        <!-- Form input data user -->
+        <form id="geometryForm">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required><br><br>
+    
+            <label for="sekolah">Sekolah:</label>
+            <input type="text" id="sekolah" name="sekolah" required><br><br>
+    
+            <label for="usia">Usia:</label>
+            <input type="number" id="usia" name="usia" required><br><br>
+    
+            <label for="alamat">Alamat:</label>
+            <input type="text" id="alamat" name="alamat" required><br><br>
+    
+            <label for="telepon">Telepon:</label>
+            <input 
+                type="number" 
+                id="telepon" 
+                name="telepon" 
+                required 
+                pattern="\d{10,12}" 
+                title="Nomor telepon harus terdiri dari 10 hingga 12 digit." 
+                placeholder="Contoh: 081234567890" 
+                minlength="10" 
+                maxlength="12">
+            <br><br>
+    
+            <!-- Pilihan bangun datar atau bangun ruang -->
+            <label for="jenis">Pilih jenis perhitungan:</label>
+            <select id="jenis" name="jenis" required>
+                <option value="">Pilih...</option>
+                <option value="luas">Luas Bangun Datar</option>
+                <option value="volume">Volume Bangun Ruang</option>
+            </select><br><br>
+    
+            <!-- Menmapilkan pilihan bangun datang atau bangun ruang -->
+            <div id="inputData"></div>
+    
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- menampilkan hasil perhitungan -->
+         <div id="result"></div>
+    </div>
+
+    <div class="container">
+        <button id="getDataBtn" onclick="location.href='dashboard.html'">Tampilkan Data Riwayat</button>
+        <div id="dataOutput"></div>
+    </div>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>

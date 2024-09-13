@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Data History</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <!-- FontAwesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <h1>Data Riwayat Perhitungan</h1>
+
+    <!-- <div class="btn-container">
+        <button id="sortNameAscBtn">Urutkan Nama Ascending</button>
+        <button id="sortNameDescBtn">Urutkan Nama Descending</button>
+        <button id="sortAgeAscBtn">Urutkan Usia Ascending</button>
+        <button id="sortAgeDescBtn">Urutkan Usia Descending</button>
+        <button id="sortDateAscBtn">Urutkan Tanggal/Waktu Ascending</button>
+        <button id="sortDateDescBtn">Urutkan Tanggal/Waktu Descending</button>
+    </div> -->
+
+    <table class="button-table">
+        <thead>
+            <tr>
+                <th>Urutkan Berdasarkan Waktu</th>
+                <th>Urutkan Berdasarkan Nama</th>
+                <th>Urutkan Berdasarkan Usia</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <button id="sortDateAscBtn"><i class="fas fa-sort-amount-up"></i></button>
+                    <button id="sortDateDescBtn"><i class="fas fa-sort-amount-down"></i></button>
+                </td>
+                <td>
+                    <button id="sortNameAscBtn"><i class="fas fa-sort-alpha-up"></i></button>
+                    <button id="sortNameDescBtn"><i class="fas fa-sort-alpha-down"></i></button>
+                </td>
+                <td>
+                    <button id="sortAgeAscBtn"><i class="fas fa-sort-numeric-up"></i></button>
+                    <button id="sortAgeDescBtn"><i class="fas fa-sort-numeric-down"></i></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>Tanggal dan Waktu</th>
+                <th>Nama</th>
+                <th>Sekolah</th>
+                <th>Usia</th>
+                <th>Alamat</th>
+                <th>Telepon</th>
+                <th>Jenis Perhitungan</th>
+                <th>Bentuk</th>
+                <th>Hasil</th>
+            </tr>
+        </thead>
+        <tbody id="dataBody">
+            <!-- Data dari CSV  -->
+        </tbody>
+    </table>
+
+    <div class="statistics" id="statistics">
+        <!-- Menampilkan statistik -->
+    </div>
+
+    <div class="btn-container">
+        <button id="goBackBtn">Menghitung lagi!</button>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+</html>
